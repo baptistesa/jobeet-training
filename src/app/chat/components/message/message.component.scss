@@ -1,0 +1,27 @@
+.container_mess_out {
+    margin-top: 1%;
+    padding: 1%;
+    width: 80%;
+    height: 5vh;
+    float: right;
+    background: rgb(93, 201, 90);
+    color: white;
+    box-shadow: 0 18px 22px 0 rgba(121, 133, 148, 0.16);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.container_mess_in {
+    margin-top: 1%;
+    padding: 1%;
+    width: 80%;
+    height: 5vh;
+    float: left;
+    background: rgb(223, 222, 227);
+    color: black;
+    box-shadow: 0 18px 22px 0 rgba(121, 133, 148, 0.16);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

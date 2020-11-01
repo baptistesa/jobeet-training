@@ -1,0 +1,8 @@
+<div class="card">
+    <h2>{{ title }}</h2>
+    <p>{{ description }}</p>
+
+    <div style="text-align: right;" *ngIf="displayButton">
+        <button mat-button color="primary" (click)="goToDetails()">Voir les détails de l'offre</button>
+    </div>
+</div>

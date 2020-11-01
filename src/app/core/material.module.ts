@@ -21,6 +21,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 
 import { DragDropModule } from "@angular/cdk/drag-drop";
+import { HeaderComponent } from './components/header/header.component';
 
 
 
@@ -28,7 +29,6 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     imports: [
         CommonModule,
         MatSidenavModule,
-        BrowserAnimationsModule,
         MatToolbarModule,
         MatButtonModule,
         MatListModule,
@@ -48,7 +48,6 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     exports: [
         CommonModule,
         MatSidenavModule,
-        BrowserAnimationsModule,
         MatToolbarModule,
         MatButtonModule,
         MatListModule,
@@ -63,7 +62,9 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
         MatExpansionModule,
         DragDropModule,
         MatCheckboxModule,
-        MatDialogModule
+        MatDialogModule,
+        HeaderComponent
     ],
+    declarations: [HeaderComponent],
 })
 export class CustomMaterialModule { }

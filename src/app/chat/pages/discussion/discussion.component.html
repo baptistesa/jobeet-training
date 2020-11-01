@@ -1,0 +1,16 @@
+<app-header [title]="'Discussion'" [subtitle]="'Discuter en direct avec d\'autres candidats'"></app-header>
+
+
+<div class="container_messages">
+
+    <app-message [type]="'in'" [message]="'Bienvenue sur la plateforme'"></app-message>
+    <app-message [type]="'out'" [message]="'Merci'"></app-message>
+    <app-message [type]="'in'" [message]="'Comment allez-vous ?'"></app-message>
+
+
+    <div class="input_message">
+        <mat-form-field style="width: 100%;">
+            <input matInput type="password" placeholder="Entrez votre message" name="password">
+        </mat-form-field>
+    </div>
+</div>

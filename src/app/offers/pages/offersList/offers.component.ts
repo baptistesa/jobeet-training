@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { OffreService } from '../../shared/offre.service';
 
 @Component({
   selector: 'app-offers',
   templateUrl: './offers.component.html',
-  styleUrls: ['./offers.component.scss']
+  styleUrls: ['./offers.component.scss'],
+  changeDetection : ChangeDetectionStrategy.OnPush
 })
 export class OffersComponent implements OnInit {
 
   offres : any;
 
-  constructor(private offresService: OffreService) {
+  constructor(private offresService: OffreService, private cd: ChangeDetectorRef) {
     this.getAllOffers();
   }
 
@@ -22,6 +23,7 @@ export class OffersComponent implements OnInit {
     this.offresService.getOffers()
       .subscribe(data => {
         this.offres = JSON.parse(JSON.stringify(data)).data;
+        this.cd.detectChanges();
     })
   }
 

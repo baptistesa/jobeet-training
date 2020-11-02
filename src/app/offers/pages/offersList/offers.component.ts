@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OffreService } from '../../shared/offre.service';
 
 @Component({
   selector: 'app-offers',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OffersComponent implements OnInit {
 
-  constructor() { }
+  offres : any;
+
+  constructor(private offresService: OffreService) {
+    this.getAllOffers();
+  }
 
   ngOnInit(): void {
+  }
+
+  // Retrieve all offers from WS
+  getAllOffers() {
+    this.offresService.getOffers()
+      .subscribe(data => {
+        this.offres = JSON.parse(JSON.stringify(data)).data;
+    })
   }
 
 }

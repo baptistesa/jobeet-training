@@ -1,6 +1,5 @@
 <app-header [title]="'Offres'" [subtitle]="'Toutes les offres'"></app-header>
 
 <div>
-    <app-card-offers [title]="'Titre de l\'offre'" [description]="'Description de l\'offre'" [displayButton]="true"></app-card-offers>
-    <app-card-offers [title]="'Titre de l\'offre'" [description]="'Description de l\'offre'" [displayButton]="true"></app-card-offers>
+    <app-card-offers *ngFor="let offer of offres" [title]="offer.title" [description]="offer.description" [displayButton]="true" [idOffre]="offer.id"></app-card-offers>
 </div>

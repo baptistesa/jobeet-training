@@ -11,6 +11,7 @@ export class CardOffersComponent implements OnInit {
   @Input() title;
   @Input() description;
   @Input() displayButton;
+  @Input() idOffre;
 
   constructor(private router: Router) { }
 
@@ -19,7 +20,7 @@ export class CardOffersComponent implements OnInit {
 
   // go to details offer
   goToDetails() {
-    this.router.navigate(["/offers/offer", 2]);
+    this.router.navigate(["/offers/offer", this.idOffre]);
   }
 
 }

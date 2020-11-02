@@ -1,5 +1,5 @@
 <app-header [title]="'Offre'" [subtitle]="'Détails de l\'offre'"></app-header>
 
-<div>
-    <app-card-offers [title]="'Titre de l\'offre'" [description]="'Description de l\'offre'" [displayButton]="false"></app-card-offers>
+<div *ngIf="offer">
+    <app-card-offers [title]="offer.title" [description]="offer.description" [displayButton]="false" [idOffre]="offer.id"></app-card-offers>
 </div>

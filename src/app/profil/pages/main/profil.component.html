@@ -1,7 +1,7 @@
 <app-header [title]="'Mon profil'" [subtitle]="'Toutes mes informations'"></app-header>
 
-<div class="container">
-    <p>Prénom: Baptiste</p>
-    <p>Nom: Saint-André</p>
-    <p>Adresse mail: baptiste.saintandre@gmail.com</p>
+<div class="container" *ngIf="infos">
+    <p>Prénom: {{ infos.name }}</p>
+    <p>Nom: {{ infos.last_name }}</p>
+    <p>Adresse mail: {{ infos.mail }}</p>
 </div>

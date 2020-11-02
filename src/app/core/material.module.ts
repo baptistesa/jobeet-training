@@ -28,7 +28,6 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     imports: [
         CommonModule,
         MatSidenavModule,
-        BrowserAnimationsModule,
         MatToolbarModule,
         MatButtonModule,
         MatListModule,
@@ -48,7 +47,6 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     exports: [
         CommonModule,
         MatSidenavModule,
-        BrowserAnimationsModule,
         MatToolbarModule,
         MatButtonModule,
         MatListModule,

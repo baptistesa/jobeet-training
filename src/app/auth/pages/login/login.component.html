@@ -3,15 +3,15 @@
         <h2>Connexion à Jobeet</h2>
         <mat-form-field style="width: 100%;">
             <mat-label>Adresse email</mat-label>
-            <input matInput placeholder="dupond@gmail.com" [(ngModel)]="username" name="username">
+            <input data-cy="username" matInput placeholder="dupond@gmail.com" [(ngModel)]="username" name="username">
         </mat-form-field>
         <mat-form-field style="width: 100%;">
             <mat-label>Mot de passe</mat-label>
-            <input matInput type="password" placeholder="*********" [(ngModel)]="password" name="password">
+            <input data-cy="password" matInput type="password" placeholder="*********" [(ngModel)]="password" name="password">
         </mat-form-field>
         <div class="connexion">
             <button mat-button color="primary" (click)="goToSignup()">S'inscrire</button>
-            <button mat-button color="primary" (click)="validateInputs()">Se connecter</button>
+            <button data-cy="login" mat-button color="primary" (click)="validateInputs()">Se connecter</button>
         </div>
     </div>
 </div>

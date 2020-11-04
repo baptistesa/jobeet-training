@@ -5,11 +5,11 @@ import { OffreService } from '../../shared/offre.service';
   selector: 'app-offers',
   templateUrl: './offers.component.html',
   styleUrls: ['./offers.component.scss'],
-  changeDetection : ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OffersComponent implements OnInit {
 
-  offres : any;
+  offres: any;
 
   constructor(private offresService: OffreService, private cd: ChangeDetectorRef) {
     this.getAllOffers();
@@ -24,7 +24,9 @@ export class OffersComponent implements OnInit {
       .subscribe(data => {
         this.offres = JSON.parse(JSON.stringify(data)).data;
         this.cd.detectChanges();
-    })
+      }, error => {
+
+      })
   }
 
 }

@@ -3,14 +3,21 @@
 
 <div class="container_messages">
 
-    <app-message [type]="'in'" [message]="'Bienvenue sur la plateforme'"></app-message>
-    <app-message [type]="'out'" [message]="'Merci'"></app-message>
-    <app-message [type]="'in'" [message]="'Comment allez-vous ?'"></app-message>
+    <div *ngFor="let message of messages">
+        <app-message *ngIf="message.nickname != username" [type]="'in'" [message]="message.message">
+        </app-message>
+        <app-message *ngIf="message.nickname == username" [type]="'out'" [message]="message.message"></app-message>
+    </div>
 
 
     <div class="input_message">
-        <mat-form-field style="width: 100%;">
-            <input matInput placeholder="Entrez votre message" name="password">
+        <span style="font-style: italic;" *ngIf="is_writting">est en train d'écrire</span><br>
+        <mat-form-field style="width: 90%; display: inline-block;">
+            <input matInput placeholder="Entrez votre message" name="message" [(ngModel)]="message" (ngModelChange)="updateStatus($event)">
         </mat-form-field>
+        <button mat-button style="display: inline-block;">
+            <mat-icon style="color: #e50051; display: inline-block; " (click)="sendMessageUser()">send
+            </mat-icon>
+        </button>
     </div>
 </div>

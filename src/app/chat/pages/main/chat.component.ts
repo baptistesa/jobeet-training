@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -8,9 +9,16 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  constructor() { }
+  username;
+
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
+  }
+
+  // Go to room
+  goToRoom() {
+    this.router.navigate(["/chat/chat", this.username]);
   }
 
 }

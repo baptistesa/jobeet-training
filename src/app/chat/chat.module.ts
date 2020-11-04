@@ -7,6 +7,7 @@ import { CustomMaterialModule } from '../core/material.module';
 import { RecentsComponent } from './components/recents/recents.component';
 import { DiscussionComponent } from './pages/discussion/discussion.component';
 import { MessageComponent } from './components/message/message.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MessageComponent } from './components/message/message.component';
   imports: [
     CommonModule,
     ChatRoutingModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    FormsModule
   ]
 })
 export class ChatModule { }

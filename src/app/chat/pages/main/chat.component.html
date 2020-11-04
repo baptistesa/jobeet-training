@@ -1,5 +1,11 @@
 <app-header [title]="'Chat'" [subtitle]="'Chats récents'"></app-header>
 
-<div>
-    <app-recents [title]="'Jean Dupond'" [chat]="'Bienvenue sur la plateforme'"></app-recents>
+<div class="username">
+
+    <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input data-cy="password" matInput placeholder="Baptiste" [(ngModel)]="username"
+            name="password">
+    </mat-form-field>
+    <button mat-button color="primary" (click)="goToRoom()">Se connecter</button>
 </div>
